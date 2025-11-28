@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>RustStats Discord bot</title>
+  <title>RustStats bot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero__card {
+      padding-top: 0.75rem;
+    }
+
+    .hero__card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero__card .card-sticker {
+      margin-bottom: 0;
+    }
+
+    .hero__card ul {
+      margin: 0.25rem 0 0;
+      padding-left: 1.1rem;
+    }
+
+    .hero__card li + li {
+      margin-top: 0.25rem;
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -18,13 +44,18 @@
             <img class="button__icon" src="https://ru-wiki.rustclash.com/img/items180/pookie.bear.png" alt="Add bot sticker" />
             Add bot
           </a>
+          <a class="button button--ghost" href="https://discord.gg/M3B2twxjD5" target="_blank" rel="noopener">
+            Join Discord
+          </a>
         </div>
       </div>
       <aside class="hero__card">
-        <div class="card-sticker" aria-hidden="true">
-          <img src="https://ru-wiki.rustclash.com/img/items180/pookie.bear.png" alt="Pookie bear sticker" />
+        <div class="hero__card-header">
+          <p class="pill">Why add it?</p>
+          <div class="card-sticker" aria-hidden="true">
+            <img src="https://ru-wiki.rustclash.com/img/items180/pookie.bear.png" alt="Pookie bear sticker" />
+          </div>
         </div>
-        <p class="pill">Why add it?</p>
         <ul>
           <li>⚡ Fast responses and accurate Rust data.</li>
           <li>🧩 Works out of the box for clans, community servers, and creators.</li>
@@ -46,23 +77,23 @@
       <div class="panel-grid">
         <article class="card">
           <h2>One bot for Rust</h2>
-          <p>RustStats is a Discord bot focused on Rust: player stats, inventories, servers, CCTV codes, raid math, genetics, and weekly skins in one place.</p>
-          <p>Data comes from Steam and BattleMetrics so you can quickly vet teammates, track servers, and plan moves without leaving Discord.</p>
+          <p>RustStats focuses only on Rust: player stats, inventories, servers, CCTV, raid math, genetics, and weekly skins.</p>
+          <p>Everything lives in Discord so teams decide faster on wipes, raids, and server moves.</p>
         </article>
         <article class="card">
           <h2>Getting started</h2>
           <ol>
             <li>Add the bot to your Discord server.</li>
-            <li>Run <code>/help</code> to see all commands.</li>
-            <li>Try <code>/ruststats</code> or <code>/rustinv</code> on your SteamID64, vanity, or profile URL.</li>
-            <li>Use Discord roles to decide who can run admin-only commands such as <code>/server</code>, <code>/guilds</code>, and <code>/bot</code>.</li>
+            <li>Use <code>/help</code> to see available commands.</li>
+            <li>Try <code>/ruststats</code> or <code>/rustinv</code> on any Steam profile (ID, vanity, or URL).</li>
+            <li>Optionally lock commands like <code>/server</code> behind Discord roles.</li>
           </ol>
-          <p>All features are modern slash commands; the bot does not use legacy text prefixes or read message content.</p>
+          <p>All features are slash commands; the bot does not read normal messages.</p>
         </article>
         <article class="card">
           <h2>Built for busy wipes</h2>
-          <p>Commands are tuned for wipe days: time zones and countdowns in <code>/wipe</code>, public or private toggles for <code>/ruststats</code> and <code>/rustinv</code>, and a compact raid calculator in <code>/calculator</code>.</p>
-          <p>CCTV and genetics utilities keep oil, farms, and base defense organised while replies stay clean on both desktop and mobile.</p>
+          <p><code>/wipe</code> shows global force wipe time, <code>/calculator</code> returns raid costs, and utilities like <code>/cctv</code> and <code>/genetic</code> keep bases and farms organised.</p>
+          <p>Replies stay short and mobile friendly, easy to read in voice text channels.</p>
         </article>
       </div>
     </section>
@@ -77,58 +108,39 @@
       <div class="feature-list">
         <article class="feature">
           <p class="pill">/ruststats</p>
-          <p>Rust player stats from Steam and BattleMetrics.</p>
-          <p>Pass any SteamID64, vanity, or profile URL and see playtime, KD, and recent servers.</p>
+          <p>Rust player stats: hours, KD, and recent servers from Steam and BattleMetrics.</p>
         </article>
         <article class="feature">
           <p class="pill">/rustinv</p>
-          <p>Rust inventory value and top items.</p>
-          <p>Get total skin value plus a top 10 list to make trades and giveaways easy.</p>
+          <p>Inventory value and top skins for any Steam account.</p>
         </article>
         <article class="feature">
           <p class="pill">/server</p>
-          <p>Rust server info via BattleMetrics ID, IP:port, hostname, or connect string.</p>
-          <p>Check population, map, and status before committing your team to a wipe.</p>
+          <p>Rust server search by BattleMetrics ID, IP:port, hostname, or connect link.</p>
         </article>
         <article class="feature">
           <p class="pill">/wipe</p>
-          <p>Next global force wipe in your time zone.</p>
-          <p>Share accurate wipe countdowns across regions and platforms.</p>
+          <p>Next global force wipe time in your time zone.</p>
         </article>
         <article class="feature">
           <p class="pill">/calculator</p>
-          <p>Raid calculator by target and weapon.</p>
-          <p>Supports common doors, walls, deployables and weapons like C4, rockets, satchels, and explosive 5.56.</p>
+          <p>Raid cost calculator for doors, walls, and deployables.</p>
         </article>
         <article class="feature">
           <p class="pill">/cctv</p>
-          <p>Rust CCTV camera names and pager codes.</p>
-          <p>Grab oil rig and base camera IDs, with an extra button to reveal pager frequencies inside Discord.</p>
+          <p>List CCTV camera names and pager frequencies.</p>
         </article>
         <article class="feature">
           <p class="pill">/genetic</p>
-          <p>Rust genetic calculator.</p>
-          <p>Input parent genomes (e.g. <code>YYYHHG YHYHHG</code>) and plan optimal crops and clones.</p>
+          <p>Genetic helper for optimal crop and clone combinations.</p>
         </article>
         <article class="feature">
           <p class="pill">/skins</p>
           <p>Current weekly Rust store skins.</p>
-          <p>Post the weekly shop to clan chat and track cosmetics without opening the Rust store.</p>
         </article>
         <article class="feature">
           <p class="pill">/help</p>
           <p>Short list of all public commands.</p>
-          <p>Use it as a quick reference when onboarding new players to your server.</p>
-        </article>
-        <article class="feature">
-          <p class="pill">/guilds</p>
-          <p>Admin-only list of Discord servers that use the bot.</p>
-          <p>Useful if you manage multiple communities and want to audit where RustStats is installed.</p>
-        </article>
-        <article class="feature">
-          <p class="pill">/bot</p>
-          <p>Admin-only diagnostics for the bot.</p>
-          <p>Shows debug information and exposes a deep diagnostics button when you need more details.</p>
         </article>
       </div>
     </section>
@@ -141,7 +153,7 @@
         <li>Discord user and guild information that Discord sends with each slash command or button interaction (IDs, usernames, avatars, server IDs).</li>
         <li>Command input you send to the bot, such as Steam IDs, profile URLs, server addresses, and genome strings.</li>
         <li>Technical logs with which command was run, basic timing, and error details to keep the bot stable.</li>
-        <li>Daily counters for how many commands each user and guild has run, stored in a small local JSON file to enforce configured limits.</li>
+        <li>Daily counters for how many commands each user and guild has run, stored in a local file to enforce configured limits.</li>
       </ul>
       <h3>How we use data</h3>
       <ul>
