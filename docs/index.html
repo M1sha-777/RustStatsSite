@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>RustStats Bot</title>
+  <title>RustStats Discord bot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,19 +11,12 @@
     <section class="hero">
       <div class="hero__content">
         <p class="eyebrow">Rust helper Discord bot</p>
-        <h1>RustStats Bot</h1>
-        <p class="lede">Quick Rust stats, raid math, CCTV codes, wipes, and more directly in Discord.</p>
+        <h1>RustStats bot</h1>
+        <p class="lede">Rust stats, raid calculator and utilities Discord bot with modern slash commands.</p>
         <div class="hero__actions">
           <a class="button" href="https://discord.com/oauth2/authorize?client_id=1088914219061235712&permissions=2147567616&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener">
-            Add bot
-          </a>
-          <a class="button button--ghost" href="https://discord.gg/M3B2twxjD5" target="_blank" rel="noopener">
             <img class="button__icon" src="https://ru-wiki.rustclash.com/img/items180/pookie.bear.png" alt="Add bot sticker" />
             Add bot
-          </a>
-          <a class="button button--ghost" href="https://discord.gg/M3B2twxjD5" target="_blank" rel="noopener">
-            <img class="button__icon" src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e278299a53f5bf88615e90_Symbol.svg" alt="Discord sticker" />
-            Join Discord
           </a>
         </div>
       </div>
@@ -36,6 +29,8 @@
           <li>⚡ Fast responses and accurate Rust data.</li>
           <li>🧩 Works out of the box for clans, community servers, and creators.</li>
           <li>🛡️ Actively maintained with clear, friendly onboarding.</li>
+          <li>🎯 Built by Rust players so your team stays in game instead of lost in browser tabs.</li>
+          <li>♾️ Optional daily limits in normal servers, unlimited usage in the <a href="https://discord.gg/M3B2twxjD5" target="_blank" rel="noopener">official RustStats server</a>.</li>
         </ul>
       </aside>
     </section>
@@ -51,22 +46,23 @@
       <div class="panel-grid">
         <article class="card">
           <h2>One bot for Rust</h2>
-          <p>Check player stats, servers, wipes, CCTV codes, raids, and skins in a few commands.</p>
-          <p>Responses pull from BattleMetrics, Steam, and in-game data so teams can make quick calls without tabbing out.</p>
+          <p>RustStats is a Discord bot focused on Rust: player stats, inventories, servers, CCTV codes, raid math, genetics, and weekly skins in one place.</p>
+          <p>Data comes from Steam and BattleMetrics so you can quickly vet teammates, track servers, and plan moves without leaving Discord.</p>
         </article>
         <article class="card">
           <h2>Getting started</h2>
           <ol>
             <li>Add the bot to your Discord server.</li>
-            <li>Run <code>/help</code> to see available commands.</li>
-            <li>Try <code>/ruststats</code> or <code>/rustinv</code> on your Steam profile.</li>
-            <li>Use Discord roles to control who can run admin-focused commands like <code>/server</code>.</li>
+            <li>Run <code>/help</code> to see all commands.</li>
+            <li>Try <code>/ruststats</code> or <code>/rustinv</code> on your SteamID64, vanity, or profile URL.</li>
+            <li>Use Discord roles to decide who can run admin-only commands such as <code>/server</code>, <code>/guilds</code>, and <code>/bot</code>.</li>
           </ol>
+          <p>All features are modern slash commands; the bot does not use legacy text prefixes or read message content.</p>
         </article>
         <article class="card">
           <h2>Built for busy wipes</h2>
-          <p>Replies include time zones, raid costs, and quick disclaimers so shot-callers can share info in voice without repeating themselves.</p>
-          <p>Snappy responses stay readable on mobile, keeping roam groups and builders on the same page.</p>
+          <p>Commands are tuned for wipe days: time zones and countdowns in <code>/wipe</code>, public or private toggles for <code>/ruststats</code> and <code>/rustinv</code>, and a compact raid calculator in <code>/calculator</code>.</p>
+          <p>CCTV and genetics utilities keep oil, farms, and base defense organised while replies stay clean on both desktop and mobile.</p>
         </article>
       </div>
     </section>
@@ -81,48 +77,58 @@
       <div class="feature-list">
         <article class="feature">
           <p class="pill">/ruststats</p>
-          <p>Player stats from Steam and BattleMetrics.</p>
-          <p>Share KD, playtime, and recent servers to vet recruits fast.</p>
+          <p>Rust player stats from Steam and BattleMetrics.</p>
+          <p>Pass any SteamID64, vanity, or profile URL and see playtime, KD, and recent servers.</p>
         </article>
         <article class="feature">
           <p class="pill">/rustinv</p>
-          <p>Inventory value and top items.</p>
-          <p>Spot pricey skins and organize fair trades or giveaways.</p>
+          <p>Rust inventory value and top items.</p>
+          <p>Get total skin value plus a top 10 list to make trades and giveaways easy.</p>
         </article>
         <article class="feature">
-          <p class="pill">/cctv</p>
-          <p>CCTV camera and pager codes.</p>
-          <p>Grab oil rig feeds and link them in Discord channels for quick references.</p>
+          <p class="pill">/server</p>
+          <p>Rust server info via BattleMetrics ID, IP:port, hostname, or connect string.</p>
+          <p>Check population, map, and status before committing your team to a wipe.</p>
         </article>
         <article class="feature">
           <p class="pill">/wipe</p>
           <p>Next global force wipe in your time zone.</p>
-          <p>Keep event reminders accurate across regions.</p>
-        </article>
-        <article class="feature">
-          <p class="pill">/server</p>
-          <p>Info for any Rust server by BattleMetrics ID, IP, or name.</p>
-          <p>See population trends, map size, and status before committing to a move.</p>
+          <p>Share accurate wipe countdowns across regions and platforms.</p>
         </article>
         <article class="feature">
           <p class="pill">/calculator</p>
-          <p>Simple raid calculator by target and weapon.</p>
-          <p>Estimate rockets, explo ammo, or satchels without opening spreadsheets.</p>
+          <p>Raid calculator by target and weapon.</p>
+          <p>Supports common doors, walls, deployables and weapons like C4, rockets, satchels, and explosive 5.56.</p>
+        </article>
+        <article class="feature">
+          <p class="pill">/cctv</p>
+          <p>Rust CCTV camera names and pager codes.</p>
+          <p>Grab oil rig and base camera IDs, with an extra button to reveal pager frequencies inside Discord.</p>
         </article>
         <article class="feature">
           <p class="pill">/genetic</p>
-          <p>Genetic calculator for crops and clones.</p>
-          <p>Quickly check ideal seed combos and harvest timings.</p>
+          <p>Rust genetic calculator.</p>
+          <p>Input parent genomes (e.g. <code>YYYHHG YHYHHG</code>) and plan optimal crops and clones.</p>
         </article>
         <article class="feature">
           <p class="pill">/skins</p>
           <p>Current weekly Rust store skins.</p>
-          <p>Share the store link or prices directly to clan chat.</p>
+          <p>Post the weekly shop to clan chat and track cosmetics without opening the Rust store.</p>
         </article>
         <article class="feature">
           <p class="pill">/help</p>
           <p>Short list of all public commands.</p>
-          <p>Use it as a fast reference when training new members.</p>
+          <p>Use it as a quick reference when onboarding new players to your server.</p>
+        </article>
+        <article class="feature">
+          <p class="pill">/guilds</p>
+          <p>Admin-only list of Discord servers that use the bot.</p>
+          <p>Useful if you manage multiple communities and want to audit where RustStats is installed.</p>
+        </article>
+        <article class="feature">
+          <p class="pill">/bot</p>
+          <p>Admin-only diagnostics for the bot.</p>
+          <p>Shows debug information and exposes a deep diagnostics button when you need more details.</p>
         </article>
       </div>
     </section>
@@ -132,24 +138,25 @@
       <p>This page describes how the RustStats Discord bot (“the bot”) handles data when you use it on Discord.</p>
       <h3>Data we receive</h3>
       <ul>
-        <li>Discord user and guild information that Discord sends with each command (IDs, usernames, avatars, server IDs).</li>
-        <li>Command input you send to the bot (for example Steam IDs, server addresses, genomes).</li>
-        <li>Technical logs needed to keep the bot stable, such as error messages and performance metrics.</li>
+        <li>Discord user and guild information that Discord sends with each slash command or button interaction (IDs, usernames, avatars, server IDs).</li>
+        <li>Command input you send to the bot, such as Steam IDs, profile URLs, server addresses, and genome strings.</li>
+        <li>Technical logs with which command was run, basic timing, and error details to keep the bot stable.</li>
+        <li>Daily counters for how many commands each user and guild has run, stored in a small local JSON file to enforce configured limits.</li>
       </ul>
       <h3>How we use data</h3>
       <ul>
         <li>To answer your commands: generate stats, calculations, and other responses.</li>
-        <li>To protect the service: rate limiting and abuse prevention.</li>
-        <li>To debug and improve the bot based on anonymous usage patterns.</li>
+        <li>To protect the service: apply per-user, per-guild, or global daily command limits and prevent abuse.</li>
+        <li>To debug and improve the bot based on anonymised usage patterns and error logs.</li>
       </ul>
       <h3>What we do not do</h3>
       <ul>
         <li>We do not sell your data.</li>
         <li>We do not use your data for advertising.</li>
-        <li>We do not read or log full message histories in your servers.</li>
+        <li>We do not read or log full message histories in your servers; the bot only works with slash commands, buttons, and basic guild metadata.</li>
       </ul>
       <h3>Data retention</h3>
-      <p>Command usage statistics and technical logs may be stored for a limited time to keep the bot reliable. If you want your data removed, contact the maintainer via the official Discord server.</p>
+      <p>Command usage statistics and technical logs may be stored for a limited time to keep the bot reliable. Daily limit counters reset every UTC day and are periodically overwritten. If you want your data removed, contact the maintainer via the official Discord server.</p>
       <h3>Contact</h3>
       <p>For privacy questions or requests, open a ticket or contact staff in the official RustStats Discord server.</p>
     </section>
@@ -161,22 +168,24 @@
       <ul>
         <li>You must follow the Discord Terms of Service and Community Guidelines.</li>
         <li>You may not use the bot for harassment, spam, or any illegal activity.</li>
+        <li>You are responsible for following Steam, Facepunch, BattleMetrics, and any other third-party terms when using data returned by the bot.</li>
         <li>The bot is provided “as is” with no uptime guarantees.</li>
       </ul>
       <h3>Limits</h3>
       <ul>
-        <li>Daily command limits or rate limits may apply to keep the bot stable for everyone.</li>
+        <li>Daily command limits or other rate limits may be enabled to keep the bot stable for everyone.</li>
+        <li>The maintainer may configure per-user, per-guild, or global daily limits and may exempt members of the official RustStats server from those limits.</li>
         <li>We may temporarily block or restrict usage that abuses or overloads the bot.</li>
       </ul>
       <h3>Changes</h3>
-      <p>Features and limits may change over time. Continued use of the bot after changes means you accept the updated terms.</p>
+      <p>Features, commands, limits, and data sources may change over time. Continued use of the bot after changes means you accept the updated terms.</p>
       <h3>Liability</h3>
       <p>The maintainer is not responsible for any losses, bans, or issues that arise from using the bot or relying on its data.</p>
       <p>If you do not agree with these terms, please remove the bot from your servers.</p>
     </section>
 
     <footer class="footer">
-      <p>RustStats Discord bot · <a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms of Service</a></p>
+      <p>RustStats Discord bot · <a href="#privacy">Privacy Policy</a> · <a href="#terms">Terms of Service</a> · <a href="https://discord.gg/M3B2twxjD5" target="_blank" rel="noopener">Official server</a></p>
     </footer>
   </main>
   <script src="script.js" defer></script>
