@@ -15,10 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   tabButtons.forEach((btn) => {
-    btn.addEventListener('click', () => setActiveTab(btn.dataset.tabTarget));
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.tabTarget;
+      setActiveTab(targetId);
+      if (targetId) {
+        history.replaceState(null, '', '#' + targetId);
+      }
+    });
   });
 
-  // Support deep-linking to tabs via hash, e.g., #privacy
   const initialHash = window.location.hash.replace('#', '');
   if (initialHash) {
     const matchingTab = tabButtons.find((btn) => btn.dataset.tabTarget === initialHash);
