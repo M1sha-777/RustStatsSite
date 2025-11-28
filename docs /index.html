@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RustStats Bot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Discord Utility</p>
+      <h1>RustStats Bot</h1>
+      <p class="lede">
+        Track your Rust performance, forecast raids, and fetch server insights with a single Discord command.
+        This landing page is ready for GitHub Pages, with dedicated tabs for Privacy Policy and Terms of Service.
+      </p>
+      <div class="hero__actions">
+        <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=0&scope=bot%20applications.commands" target="_blank" rel="noreferrer">Add to Discord</a>
+        <button class="button button--ghost" data-tab-target="features">See features</button>
+      </div>
+    </div>
+    <div class="hero__card">
+      <div class="stat-grid">
+        <div>
+          <p class="label">Server lookups</p>
+          <p class="value">BattleMetrics ready</p>
+        </div>
+        <div>
+          <p class="label">Raid helpers</p>
+          <p class="value">Explosive cost & timers</p>
+        </div>
+        <div>
+          <p class="label">Player insights</p>
+          <p class="value">KD, recent wipes</p>
+        </div>
+        <div>
+          <p class="label">Status</p>
+          <p class="value status">Online</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <nav class="tabs" aria-label="Site sections">
+      <button class="tab active" data-tab-target="overview">Overview</button>
+      <button class="tab" data-tab-target="features">Features</button>
+      <button class="tab" data-tab-target="privacy">Privacy Policy</button>
+      <button class="tab" data-tab-target="terms">Terms of Service</button>
+    </nav>
+
+    <section id="overview" class="tab-panel active" aria-labelledby="Overview">
+      <div class="panel-grid">
+        <div>
+          <h2>Built for Rust communities</h2>
+          <p>
+            RustStats Bot brings your favorite survival game data straight into Discord. The bot collects only
+            the data it needs to respond to slash commands, then responds with concise embeds so your team can stay focused on the wipe.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Quick start</h3>
+          <ol>
+            <li>Invite the bot to your server with the "Add to Discord" button.</li>
+            <li>Use slash commands like <code>/stats</code>, <code>/server</code>, or <code>/raid-calc</code>.</li>
+            <li>Customize channels and permissions with standard Discord roles.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="tab-panel" aria-labelledby="Features">
+      <div class="feature-list">
+        <article class="feature">
+          <div class="pill">Player stats</div>
+          <h3>Player tracking without spam</h3>
+          <p>Fetch recent wipes, K/D, playtime, and activity trends directly inside Discord. Results are cached briefly to keep responses fast.</p>
+        </article>
+        <article class="feature">
+          <div class="pill">Server lookup</div>
+          <h3>Live server info</h3>
+          <p>Check population, map size, queue length, and wipe timers using data from trusted Rust stat providers.</p>
+        </article>
+        <article class="feature">
+          <div class="pill">Raid tools</div>
+          <h3>Plan raids confidently</h3>
+          <p>Calculate explosive costs, raid timers, and upkeep estimates so you can focus on the push.</p>
+        </article>
+        <article class="feature">
+          <div class="pill">Friendly UX</div>
+          <h3>Slash commands first</h3>
+          <p>All features run through Discord slash commands—no DM spam, and no data collected beyond what is needed to complete a request.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="privacy" class="tab-panel" aria-labelledby="Privacy policy">
+      <div class="legal">
+        <h2>Privacy Policy</h2>
+        <p>Last updated: June 2024</p>
+        <h3>Data we process</h3>
+        <ul>
+          <li><strong>Discord metadata:</strong> user IDs, usernames, and guild IDs provided with each slash command.</li>
+          <li><strong>Command content:</strong> the options you supply (player names, server IPs, etc.) to fulfill a request.</li>
+          <li><strong>Game data:</strong> public Rust statistics fetched from third-party sources to build responses.</li>
+        </ul>
+        <h3>How we use data</h3>
+        <p>The bot uses the data above only to generate responses to commands. Runtime caches are short-lived and are cleared when the process restarts. No marketing or profiling is performed.</p>
+        <h3>Storage and retention</h3>
+        <p>We do not maintain long-term databases. Temporary caches or logs may contain Discord IDs for operational troubleshooting and are routinely rotated.</p>
+        <h3>Third parties</h3>
+        <p>Game statistics are requested from publicly available Rust stat providers. Data is transmitted over HTTPS and is not shared with advertisers.</p>
+        <h3>Your choices</h3>
+        <ul>
+          <li>Remove the bot from your server at any time via Discord's server settings.</li>
+          <li>Limit access using Discord roles and channel permissions.</li>
+          <li>Contact the maintainer to request log removal for your Discord ID if operational logs are present.</li>
+        </ul>
+        <h3>Contact</h3>
+        <p>For privacy questions, open an issue on the GitHub repository or reach out to the maintainer via Discord.</p>
+      </div>
+    </section>
+
+    <section id="terms" class="tab-panel" aria-labelledby="Terms of service">
+      <div class="legal">
+        <h2>Terms of Service</h2>
+        <p>Last updated: June 2024</p>
+        <h3>Acceptable use</h3>
+        <ul>
+          <li>Do not use the bot to harass, spam, or automate disruptive behavior in Discord servers.</li>
+          <li>Respect third-party API rate limits and Rust game terms when using data sourced by the bot.</li>
+          <li>Follow Discord's Terms of Service and Community Guidelines at all times.</li>
+        </ul>
+        <h3>Availability</h3>
+        <p>The bot is provided on a best-effort basis. Downtime may occur during maintenance windows or when external Rust statistic services are unavailable.</p>
+        <h3>Liability</h3>
+        <p>The bot is provided "as-is" without warranties. The maintainer is not liable for loss of data, game progress, or server disruptions caused by use of the bot.</p>
+        <h3>Termination</h3>
+        <p>We may revoke access or block abuse without notice to protect the stability of the service and third-party providers.</p>
+        <h3>Contact</h3>
+        <p>Open an issue on the project's GitHub repository or contact the maintainer via Discord for questions about these terms.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>RustStats Bot • Built for Rust communities • Ready for GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
