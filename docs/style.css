@@ -130,6 +130,9 @@ a {
   text-decoration: none;
   transition: transform 150ms ease, box-shadow 150ms ease;
   box-shadow: 0 10px 30px rgba(109, 211, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .button:hover,
@@ -143,6 +146,14 @@ a {
   color: var(--text);
   border: 1px solid var(--border);
   box-shadow: none;
+}
+
+.button__icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+  border-radius: 6px;
 }
 
 .tabs {
