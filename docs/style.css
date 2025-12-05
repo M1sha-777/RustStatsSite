@@ -271,6 +271,43 @@ a {
   font-size: 0.85rem;
 }
 
+.faq {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-top: 1.25rem;
+}
+
+.faq__list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.faq details {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  color: #f5f7fb;
+  font-weight: 700;
+}
+
+.faq summary:hover,
+.faq summary:focus-visible {
+  color: var(--accent);
+}
+
+.faq p {
+  margin: 0.5rem 0 0;
+}
+
 .legal h2 {
   margin-bottom: 0.25rem;
 }

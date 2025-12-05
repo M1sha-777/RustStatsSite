@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://m1sha-777.github.io/RustStatsSite/sitemap.xml
