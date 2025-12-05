@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="RustStats Discord bot for Rust player stats, raid cost calculator, CCTV codes, server search, and helpful slash commands."
+    content="RustStats Discord bot for Rust player stats, raid calculator, CCTV codes, server search, wipe timers, and helper slash commands."
   />
   <meta
     name="keywords"
-    content="Rust Discord bot, Rust stats, raid calculator, Rust server search, CCTV codes, Rust slash commands, Rust utilities"
+    content="Rust Discord bot, Rust stats, raid calculator, Rust server search, CCTV codes, Rust slash commands, Rust utilities, Rust wipe timer"
   />
+  <meta name="author" content="RustStats bot maintainer" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://m1sha-777.github.io/RustStatsSite/docs/" />
   <meta property="og:title" content="RustStats Discord Bot" />
@@ -22,6 +23,7 @@
   <meta property="og:url" content="https://m1sha-777.github.io/RustStatsSite/docs/" />
   <meta property="og:image" content="https://github.com/M1sha-777/RustStatsSite/blob/main/image2.png?raw=true" />
   <meta property="og:site_name" content="RustStats Bot" />
+  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RustStats Discord Bot" />
   <meta
@@ -30,7 +32,7 @@
   />
   <meta name="twitter:image" content="https://github.com/M1sha-777/RustStatsSite/blob/main/image2.png?raw=true" />
   <meta name="theme-color" content="#f16436" />
-  <title>RustStats bot</title>
+  <title>RustStats Discord Bot | Rust player stats & raid calculator</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
@@ -48,6 +50,46 @@
         "price": "0",
         "priceCurrency": "USD"
       }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I add the RustStats bot to my Discord server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Click the \"Add bot\" button to invite RustStats with slash command permissions, then run /help to see every available Rust command."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What Rust stats can the bot show?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use /ruststats for player hours, KD, recent servers, /rustinv for inventory value, and /server to look up BattleMetrics or IP:port servers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does RustStats include a raid calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Run /calculator to get sulphur, ammo, and explosive costs for doors, walls, deployables, and other raid targets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the RustStats bot free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RustStats is free. Optional daily limits keep the bot stable, and the official RustStats server has unlimited usage."
+          }
+        }
+      ]
     }
   </script>
   <style>
@@ -261,6 +303,38 @@
       <h3>Liability</h3>
       <p>The maintainer is not responsible for any losses, bans, or issues that arise from using the bot or relying on its data.</p>
       <p>If you do not agree with these terms, please remove the bot from your servers.</p>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-heading">
+      <div class="section-heading">
+        <h2 id="faq-heading">RustStats bot FAQ</h2>
+        <div class="section-sticker" aria-hidden="true">
+          <img src="https://wiki.rustclash.com/img/items180/boomer.rocket.png" alt="Rocket icon" />
+        </div>
+      </div>
+      <p class="lede">Quick answers for players and admins searching for the RustStats Discord bot.</p>
+      <div class="faq__list">
+        <details>
+          <summary>How do I invite the RustStats bot?</summary>
+          <p>Use the <strong>Add bot</strong> button above to invite RustStats with slash commands enabled, then run <code>/help</code> to explore every command.</p>
+        </details>
+        <details>
+          <summary>Which Rust stats can I fetch?</summary>
+          <p><code>/ruststats</code> shows hours, KD, and recent servers, while <code>/rustinv</code> returns inventory value and top skins for any Steam profile.</p>
+        </details>
+        <details>
+          <summary>Does the bot include raid and base tools?</summary>
+          <p>Yes. <code>/calculator</code> returns raid costs, <code>/cctv</code> lists camera names and pager frequencies, and <code>/genetic</code> helps with crop layouts.</p>
+        </details>
+        <details>
+          <summary>Can I look up Rust servers?</summary>
+          <p><code>/server</code> searches BattleMetrics IDs, IP:ports, hostnames, or connect links so teams can hop to the right server quickly.</p>
+        </details>
+        <details>
+          <summary>Is RustStats free?</summary>
+          <p>RustStats is free to use. Optional daily limits keep performance stable, and the official RustStats Discord server has unlimited usage.</p>
+        </details>
+      </div>
     </section>
 
     <footer class="footer">
